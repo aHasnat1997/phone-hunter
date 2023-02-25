@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="valentine">
+<html lang="en" data-theme="emerald">
 
 <head>
   <meta charset="UTF-8" />
@@ -24,13 +24,13 @@
 <body>
   <!-- Header Start -->
   <header>
-    <nav class="bg-orange-400 shadow-2xl px-20">
+    <nav class="bg-primary shadow-2xl px-20">
       <div class="navbar flex justify-between">
         <a href="index.html" class="w-16"><img src="img/favicon.png" /></a>
         <div class="">
           <div class="flex">
-            <input type="text" placeholder="Search" class="input input-bordered w-80" />
-            <button class="btn btn-ghost btn-circle text-3xl">
+            <input type="text" id="search-fild" placeholder="Search" class="input input-bordered w-80" />
+            <button onclick="searchPhone()" class="btn btn-ghost btn-circle text-3xl">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
@@ -58,49 +58,13 @@
   <!-- Header End -->
   <!-- main -->
   <main class="max-w-screen-xl mx-auto my-12">
-    <section class="grid grid-cols-4 gap-8">
-      <!-- card -->
-      <div class="card bg-base-200 shadow-xl overflow-hidden">
-        <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-mini.jpg" alt="Shoes" />
-        <div class="card-body">
-          <h2 class="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div class="card-actions justify-end">
-            <button class="btn btn-primary">Buy Now</button>
-          </div>
-        </div>
-      </div>
-      
-      <div class="card bg-base-200 shadow-xl overflow-hidden">
-        <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-mini.jpg" alt="Shoes" />
-        <div class="card-body">
-          <h2 class="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div class="card-actions justify-end">
-            <button class="btn btn-primary">Buy Now</button>
-          </div>
-        </div>
-      </div>
-      <div class="card bg-base-200 shadow-xl overflow-hidden">
-        <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-mini.jpg" alt="Shoes" />
-        <div class="card-body">
-          <h2 class="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div class="card-actions justify-end">
-            <button class="btn btn-primary">Buy Now</button>
-          </div>
-        </div>
-      </div>
-      <div class="card bg-base-200 shadow-xl overflow-hidden">
-        <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-mini.jpg" alt="Shoes" />
-        <div class="card-body">
-          <h2 class="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div class="card-actions justify-end">
-            <button class="btn btn-primary">Buy Now</button>
-          </div>
-        </div>
-      </div>
+    <section class="flex justify-center">
+      <span id="spinner" class="animate-spin text-8xl text-center hidden"><i class="fa-solid fa-rotate"></i></span>
+    </section>
+    <section id="no-found-massage" class="hidden">
+      <h1 class="text-center text-6xl font-bold text-warning">Search Result not Match</h1>
+    </section>
+    <section id="card-container" class="grid grid-cols-4 gap-8">
       <!-- card -->
     </section>
   </main>
