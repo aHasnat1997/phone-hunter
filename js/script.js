@@ -1,12 +1,12 @@
-const loadPhone = async (searchText) => {
+const loadPhone = async (searchText, limitData) => {
   const url = `https://openapi.programming-hero.com/api/phones?search=${(searchText) ? searchText : 'a'}`;
   console.log(url);
   const res = await fetch(url);
   const data = await res.json();
-  showPhone(data.data);
+  showPhone(data.data, limitData);
 };
 
-const showPhone = phones => {
+const showPhone = (phones, limitData) => {
   console.log(phones);
 
   if (phones.length === 0) {
@@ -17,6 +17,16 @@ const showPhone = phones => {
   }
 
   const cardContainer = document.getElementById('card-container');
+
+  const loadMore = document.getElementById('load-more-btn');
+
+  if (limitData && phones.length > 16) {
+    phones = phones.slice(0, 16);
+    loadMore.classList.remove('hidden');
+  }
+  else (
+    loadMore.classList.add('hidden')
+  )
 
   phones.forEach(phone => {
     const { image, phone_name } = phone;
@@ -34,16 +44,23 @@ const showPhone = phones => {
     `;
     cardContainer.appendChild(div);
   });
-  document.getElementById('search-fild').value = '';
   spinner(false);
 };
 
-const searchPhone = () => {
+const searchData = (limitData) => {
   spinner(true);
   const searchFild = document.getElementById('search-fild').value;
-  loadPhone(searchFild);
+  loadPhone(searchFild, limitData);
   document.getElementById('card-container').innerHTML = '';
 };
+
+const searchPhone = () => {
+  searchData(16);
+};
+
+document.getElementById('load-more-btn').addEventListener('click', function(){
+  searchData();
+});
 
 const spinner = isSpin => {
   const spinner = document.getElementById('spinner');

@@ -57,16 +57,31 @@
   </header>
   <!-- Header End -->
   <!-- main -->
+
   <main class="max-w-screen-xl mx-auto my-12">
+
+    <!-- spinner -->
     <section class="flex justify-center">
       <span id="spinner" class="animate-spin text-8xl text-center hidden"><i class="fa-solid fa-rotate"></i></span>
     </section>
+    <!-- spinner -->
+
+    <!-- error massage -->
     <section id="no-found-massage" class="hidden">
       <h1 class="text-center text-6xl font-bold text-warning">Search Result not Match</h1>
     </section>
-    <section id="card-container" class="grid grid-cols-4 gap-8">
-      <!-- card -->
+    <!-- error massage -->
+
+    <!-- card -->
+    <section id="card-container" class="grid grid-cols-4 gap-8"></section>
+    <!-- card -->
+
+    <!-- load more -->
+    <section class="flex justify-center my-20">
+      <button id="load-more-btn" class="btn btn-outline btn-wide btn-info w-96 text-xl font-bold hidden">Load More</button>
     </section>
+    <!-- load more -->
+
   </main>
   <!-- main -->
 
