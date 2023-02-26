@@ -94,18 +94,39 @@ const modalFuntion = (details) => {
   const others = details.others;
   const { Bluetooth, GPS, NFC, WLAN } = others;
 
-
+  
   document.getElementById('modal-img').setAttribute('src', `${image}`);
-  document.getElementById('brand').innerText = brand;
-  document.getElementById('name').innerText = name;
-  document.getElementById('releaseDate').innerText = releaseDate;
-  document.getElementById('chipSet').innerText = chipSet;
-  document.getElementById('displaySize').innerText = displaySize;
-  document.getElementById('memory').innerText = memory;
-  document.getElementById('storage').innerText = storage;
-  document.getElementById('bluetooth').innerText = Bluetooth;
-  document.getElementById('gps').innerText = GPS;
-  document.getElementById('nfc').innerText = NFC;
-  document.getElementById('wlan').innerText = WLAN;
+  document.getElementById('modal-body').innerHTML = `
+  <p id="brand" class="card-title text-3xl">${brand}</p>
+  <p id="name" class="card-title text-4xl my-2">${name}</p>
+  <p id="releaseDate" class="card-title text-2xl">${releaseDate}</p>
+  <div class="flex items-center mt-8">
+    <p class="card-title text-2xl font-bold">Features</p>
+    <hr class="w-full border-y-base-300 border-b-2" />
+  </div>
+  <div class="text-xl">
+    <p>Chip Set : <span id="chipSet">${chipSet}</span></p>
+    <p>Display : <span id="displaySize">${displaySize}</span></p>
+    <p>Memory : <span id="memory">${memory}</span></p>
+    <p>Storage : <span id="storage">${storage}</span></p>
+  </div>
+  <div class="flex items-center mt-8">
+    <p class="card-title text-2xl font-bold">Others</p>
+    <hr class="w-full border-y-base-300 border-b-2" />
+  </div>
+  <div class="text-xl">
+    <p>Bluetooth : <span id="bluetooth">${Bluetooth}</span></p>
+    <p>GPS : <span id="gps">${GPS}</span></p>
+    <p>NFC : <span id="nfc">${NFC}</span></p>
+    <p>WLAN : <span id="wlan">${WLAN}</span></p>
+  </div> 
+  `;
+
+
+
+
+
 
 };
+
+loadPhone('a', 16);
