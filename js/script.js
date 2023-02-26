@@ -97,28 +97,28 @@ const modalFuntion = (details) => {
   
   document.getElementById('modal-img').setAttribute('src', `${image}`);
   document.getElementById('modal-body').innerHTML = `
-  <p id="brand" class="card-title text-3xl">${brand}</p>
-  <p id="name" class="card-title text-4xl my-2">${name}</p>
-  <p id="releaseDate" class="card-title text-2xl">${releaseDate}</p>
+  <p class="card-title text-3xl">${brand}</p>
+  <p class="card-title text-4xl my-2">${name}</p>
+  <p class="card-title text-2xl">${releaseDate}</p>
   <div class="flex items-center mt-8">
     <p class="card-title text-2xl font-bold">Features</p>
     <hr class="w-full border-y-base-300 border-b-2" />
   </div>
   <div class="text-xl">
-    <p>Chip Set : <span id="chipSet">${chipSet}</span></p>
-    <p>Display : <span id="displaySize">${displaySize}</span></p>
-    <p>Memory : <span id="memory">${memory}</span></p>
-    <p>Storage : <span id="storage">${storage}</span></p>
+    <p>Chip Set : ${chipSet}</p>
+    <p>Display : ${displaySize}</p>
+    <p>Memory : ${memory}</p>
+    <p>Storage : ${storage}</p>
   </div>
   <div class="flex items-center mt-8">
     <p class="card-title text-2xl font-bold">Others</p>
     <hr class="w-full border-y-base-300 border-b-2" />
   </div>
   <div class="text-xl">
-    <p>Bluetooth : <span id="bluetooth">${Bluetooth}</span></p>
-    <p>GPS : <span id="gps">${GPS}</span></p>
-    <p>NFC : <span id="nfc">${NFC}</span></p>
-    <p>WLAN : <span id="wlan">${WLAN}</span></p>
+    <p>Bluetooth : ${Bluetooth}</p>
+    <p>GPS : ${GPS}</p>
+    <p>NFC : ${NFC}</p>
+    <p>WLAN : ${WLAN}</p>
   </div> 
   `;
 
