@@ -88,30 +88,24 @@ const detailsPhone = async id => {
 const modalFuntion = (details) => {
   console.log('click');
 
-  const {image, name} = details;
+  const { image, name, brand, releaseDate } = details;
+  const features = details.mainFeatures;
+  const { chipSet, displaySize, memory, storage } = features;
+  const others = details.others;
+  const { Bluetooth, GPS, NFC, WLAN } = others;
+
+
   document.getElementById('modal-img').setAttribute('src', `${image}`);
+  document.getElementById('brand').innerText = brand;
   document.getElementById('name').innerText = name;
-
-  // const modalContener = document.getElementById('modal-contener');
-  // modalContener.innerHTML = '';
-
-  // const div = document.createElement('div');
-  // div.innerHTML = `
-  // <input type="checkbox" id="my-modal" class="modal-toggle" />
-  //   <label for="my-modal" class="modal cursor-pointer">
-  //     <label class="modal-box relative max-w-5xl" for="">
-
-  //       <div class="card lg:card-side">
-  //         <img id="modal-img" src="${image}" width="50%" />
-  //         <div class="card-body">
-  //           <h2 class="card-title">New album is released!</h2>
-  //           <p>Click the button to listen on Spotiwhy app.</p>
-  //         </div>
-  //       </div>
-
-  //     </label>
-  //   </label>
-  // `;
-  // modalContener.appendChild(div);
+  document.getElementById('releaseDate').innerText = releaseDate;
+  document.getElementById('chipSet').innerText = chipSet;
+  document.getElementById('displaySize').innerText = displaySize;
+  document.getElementById('memory').innerText = memory;
+  document.getElementById('storage').innerText = storage;
+  document.getElementById('bluetooth').innerText = Bluetooth;
+  document.getElementById('gps').innerText = GPS;
+  document.getElementById('nfc').innerText = NFC;
+  document.getElementById('wlan').innerText = WLAN;
 
 };

@@ -25,7 +25,7 @@
   <!-- Header Start -->
   <header>
     <nav class="bg-primary shadow-2xl px-20">
-      <div class="navbar flex justify-between">
+      <div class="navbar flex flex-col md:flex-row justify-between">
         <a href="index.html" class="w-16"><img src="img/favicon.png" /></a>
         <div class="">
           <div class="flex">
@@ -73,7 +73,7 @@
     <!-- error massage -->
 
     <!-- card -->
-    <section id="card-container" class="grid grid-cols-4 gap-8"></section>
+    <section id="card-container" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mx-4"></section>
     <!-- card -->
 
     <!-- load more -->
@@ -89,6 +89,9 @@
 
 
 
+
+
+
   <!-- modal -->
   <section id="modal-contener">
 
@@ -99,8 +102,31 @@
         <div class="card lg:card-side">
           <img id="modal-img" width="50%" />
           <div class="card-body">
-            <h2 id="name" class="card-title"></h2>
-            <p>Click the button to listen on Spotiwhy app.</p>
+
+            <p id="brand" class="card-title text-3xl">brand</p>
+            <p id="name" class="card-title text-4xl my-2">name</p>
+            <p id="releaseDate" class="card-title text-2xl">release Date</p>
+            <div class="flex items-center mt-8">
+              <p class="card-title text-2xl font-bold">Features</p>
+              <hr class="w-full border-y-base-300 border-b-2" />
+            </div>
+            <div class="text-xl">
+              <p>Chip Set : <span id="chipSet"></span></p>
+              <p>Display : <span id="displaySize"></span></p>
+              <p>Memory : <span id="memory"></span></p>
+              <p>Storage : <span id="storage"></span></p>
+            </div>
+            <div class="flex items-center mt-8">
+              <p class="card-title text-2xl font-bold">Others</p>
+              <hr class="w-full border-y-base-300 border-b-2" />
+            </div>
+            <div class="text-xl">
+              <p>Bluetooth : <span id="bluetooth"></span></p>
+              <p>GPS : <span id="gps"></span></p>
+              <p>NFC : <span id="nfc"></span></p>
+              <p>WLAN : <span id="wlan"></span></p>
+            </div>
+
           </div>
         </div>
 
